@@ -1,7 +1,7 @@
 ## This module has a special matrix that is capable of caching it's own inverse
 ## The module also has an function operating on the cachable matrix
 
-## This creates a cahcable matrix, which is capable of storing it's own inverse
+## This creates a cachable matrix, which is capable of storing it's own inverse
 makeCacheMatrix <- function(x = matrix()) {
   inverse <- NULL
   
@@ -31,7 +31,6 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## This function tries to solve the inverse of a matrix. It uses the cached version if it exists.
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
   m <- x$getInverse()
   
   if(!is.null(m)){
